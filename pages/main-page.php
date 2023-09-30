@@ -18,13 +18,11 @@
           </div>
         </div>
         <div class="pricedata">
-          <div class="price"><b>Price:</b>
-            <?=$car["price"]?>
+          <div class="price"><b>Price:</b><?=$car["price"]?>
             €
           </div>
           <div class="finance"></div>
         </div>
-      </div></a></article>
-    <? } ?>
+      </div></a></article>  <? } ?>
   <? } ?>
 </div>

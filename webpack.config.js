@@ -35,14 +35,6 @@ module.exports = env => {
 		devtool: env.prod ? 'source-map' : 'eval',
 		module: {
 			rules: [
-				// {
-				// 	test: /.css$/,
-				// 	use: ExtractTextPlugin.extract({
-				// 		fallback: "style-loader",
-				// 		use: "css-loader",
-				// 		publicPath: ""
-				// 	})
-				// },
 				{
 					enforce: 'pre',
 					test: /\.(js|jsx)$/,
@@ -81,6 +73,11 @@ module.exports = env => {
 			new HtmlPlugin({
 				filename: './pages/main-page.php',
 				template: './app/templates/pages/main-page.pug',
+				chunks: ['']
+			}),
+			new HtmlPlugin({
+				filename: './pages/detail.php',
+				template: './app/templates/pages/detail.pug',
 				chunks: ['']
 			}),
 			new HtmlPlugin({
